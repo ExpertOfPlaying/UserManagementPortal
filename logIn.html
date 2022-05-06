@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="loginStyles.css"/>
+    <script src="login.js"></script>
 </head>
 <body>
-
+<div class="container">
+    <div class="main">
+        <h2>Login</h2>
+        <hr>
+        <form id="form_id" method="post" name="myform">
+            <label>User Name :</label>
+            <label for="username"></label><input type="text" name="username" id="username"/>
+            <label>Password :</label>
+            <label for="password"></label><input type="password" name="password" id="password"/>
+            <input type="button" value="Login" id="submit" onclick="validate()"/>
+        </form>
+        <span>
+            <b class="valid">Admin User Name: Admin<br/>Admin Password: adminpass<br/>Staff User Name: Staff<br/> Staff Password: staffpass</b></span>
+    </div>
+    <div id="company-name"></div>
+</div>
 </body>
 </html>

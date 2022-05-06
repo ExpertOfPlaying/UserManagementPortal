@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff List</title>
+  <link rel="stylesheet" href="adminStyles.css"/>
+  <script src="addDeletePerson.js"></script>
+</head>
+<body>
+<h2>Staff List</h2>
+<input type="button" value="Add User" id="ocaddmenu" onclick="openAndCloseAddMenu()"/>
+<input type="button" value="Delete User" id="delete" onclick="addDelete()"/>
+<input type="button" value="Update User" id="update"/>
+<div id="addmenu" style="display: none;">
+  <label>Staff Id:</label>
+  <label for="ID"></label>
+  <input type="text" name="staffID" id="ID" placeholder="007"/>
+  <br>
+  <label>First Name:</label>
+  <label for="fName"></label>
+  <input type="text" name="fName" id="fName" placeholder="Max"/>
+  <br>
+  <label>Last name:</label>
+  <label for="lName"></label>
+  <input type="text" name="lName" id="lName" placeholder="Mustermann"/>
+  <br>
+  <label>E-Mail:</label>
+  <label for="email"></label>
+  <input type="text" name="email" id="email" placeholder="max_mustermann@gmail.com"/>
+  <br>
+  <form id="gender">
+    <span>Gender:</span><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+  </form>
+  <br>
+  <label>Date of birth:</label>
+  <label for="DOB"></label>
+  <input type="date" name="DOB" id="DOB"/>
+  <br>
+  <label for="departments">Choose a department:</label>
+  <select name="departments" id="departments">
+    <option value="Fachbereich 1">Fachbereich 1</option>
+    <option value="Fachbereich 2">Fachbereich 2</option>
+    <option value="Fachbereich 3">Fachbereich 3</option>
+    <option value="Fachbereich 4">Fachbereich 4</option>
+  </select>
+  <br>
+  <input type="button" value="Add User" id="adduserbutton" onclick="addUser()"/>
+</div>
+
+<table id="userlist">
+  <tr>
+    <th>Staff ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>E-Mail</th>
+    <th>Gender</th>
+    <th>Date of birth</th>
+    <th>Department</th>
+  </tr>
+</table>
+
+</body>
+</html>

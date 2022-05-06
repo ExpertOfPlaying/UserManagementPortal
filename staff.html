@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff</title>
+    <link rel="stylesheet" href="staffStyles.css"/>
+    <script src="staff.js"></script>
+</head>
+<body>
+<h1>Course Overview</h1>
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Courses</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#math" onclick="addUser()">Math</a>
+        <a href="#english" onclick="addUser()">English</a>
+        <a href="#art" onclick="addUser()">Art</a>
+        <a href="#magic" onclick="addUser()">Magic</a>
+    </div>
+</div>
+
+<table id="userlist">
+    <tr>
+        <th>Student ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>E-Mail</th>
+        <th>Gender</th>
+        <th>Date of birth</th>
+        <th>Department</th>
+    </tr>
+</table>
+
+</body>
+</html>
