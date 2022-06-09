@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Student List</title>
     <link rel="stylesheet" href="adminStyles.css"/>
-    <script src="addDeletePerson.js"></script>
+    <script src="managePersons.js"></script>
 </head>
 <body>
 <h2>Student List</h2>
@@ -52,7 +52,7 @@
     <br>
     <label>Joining Date:</label>
     <label for="JD"></label>
-    <input type="date" name="JD" id="JD"/>
+    <input type="date" name="JD" min="2015-01-01" max="2015-12-31" id="JD"/>
     <br>
     <input type="button" value="Add User" id="adduserbutton" onclick="addUser()"/>
 </div>
@@ -65,8 +65,18 @@
         <th>E-Mail</th>
         <th>Gender</th>
         <th>Date of birth</th>
-        <th>Department</th>
-        <th>Joining date</th>
+        <th>Department: <label for="departmentFilter"></label><select name="departments" id="departmentFilter" onchange="filterStudentDepartment(this)">
+            <option value="All">All</option>
+            <option value="Fachbereich 1">Fachbereich 1</option>
+            <option value="Fachbereich 2">Fachbereich 2</option>
+            <option value="Fachbereich 3">Fachbereich 3</option>
+            <option value="Fachbereich 4">Fachbereich 4</option>
+        </select></th>
+        <th>Joining date: <label for="semesterFilter"></label><select name="semesters" id="semesterFilter">
+            <option value="All">All</option>
+            <option value="Winter">Winter</option>
+            <option value="Summer">Summer</option>
+        </select></th>
     </tr>
 </table>
 
